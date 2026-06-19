@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1839F0D42FE52AAB009C1944 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1839F0D32FE52AA2009C1944 /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		18FB1B372FE42B090009B52A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1839F0D32FE52AA2009C1944 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		18FB1B202FE42B070009B52A /* PropFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PropFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FB1B362FE42B090009B52A /* PropFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PropFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FB1B402FE42B090009B52A /* PropFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PropFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +93,7 @@
 		18FB1B172FE42B070009B52A = {
 			isa = PBXGroup;
 			children = (
+				1839F0D32FE52AA2009C1944 /* .gitignore */,
 				18FB1B222FE42B070009B52A /* PropFinder */,
 				18FB1B392FE42B090009B52A /* PropFinderTests */,
 				18FB1B432FE42B090009B52A /* PropFinderUITests */,
@@ -225,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1839F0D42FE52AAB009C1944 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

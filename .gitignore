@@ -1,0 +1,52 @@
+# ==========================================
+# Xcode Project & Build Artifacts
+# ==========================================
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# ==========================================
+# Xcode User Settings & Workspace State
+# ==========================================
+# Block personal layout preferences and window states to prevent git merge conflicts
+xcuserdata/
+*.xcuserstate
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# XCWorkspace configuration that dynamically changes per machine
+.開拓/
+!default.開拓/
+
+# ==========================================
+# Dependency Managers
+# ==========================================
+
+# Swift Package Manager (SPM)
+# Ignore build artifacts but keep the package layout configurations
+.build/
+.swiftpm/
+# Un-comment the next line if you want to cache the exact dependency clones locally
+# .swiftpm/xcode/package.resolved
+
+# CocoaPods
+# Ignore the Pods directory unless you intentionally want to check it in
+Pods/
+*.xcworkspace
+
+# Carthage
+Carthage/Build/
+
+# ==========================================
+# Operating System & Environment
+# ==========================================
+.DS_Store
+Icon_
+Thumbs.db
+*.swp
+*.lock
+.env
