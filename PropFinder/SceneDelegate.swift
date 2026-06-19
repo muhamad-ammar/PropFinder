@@ -13,11 +13,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
-    }
+            // 1. Ensure we have a valid UIWindowScene instance
+            guard let windowScene = (scene as? UIWindowScene) else { return }
+            
+            // 2. Programmatically create the UIWindow bounded by the scene's screen coordinate space
+            let window = UIWindow(windowScene: windowScene)
+            
+            // 3. Instantiate our initial blank ViewController (from your template file)
+        // 1. Initialize the concrete remote and local storage structures
+        let remoteSource = FirestoreRemoteDataSource()
+        let repo = PropertyRepository(remoteDataSource: remoteSource)
+
+        // 2. Inject repo into the state machine ViewModel
+        let listViewModel = PropertyListViewModel(repository: repo)
+
+        // 3. Inject ViewModel into your programmatic View Controller
+        let rootVC = PropertyListViewController(viewModel: listViewModel)
+
+        // 4. Wrap inside navigation control and apply to window
+        window.rootViewController = UINavigationController(rootViewController: rootVC)// Ensures a clean canvas
+            
+            // 5. Retain the window context in our property and bring it to the forefront
+            self.window = window
+            window.makeKeyAndVisible()
+        }
+    
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
